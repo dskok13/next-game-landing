@@ -1,0 +1,46 @@
+.ct-landing-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ct-landing-text {
+  display: flex;
+  width: 40%;
+  height: 70vh;
+  background: url("/assets/images/landing/character1.png") no-repeat;
+  background-size: 50% 60%;
+  background-position: bottom center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 38px;
+}
+.ct-landing-text p:first-of-type {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+}
+.ct-landing-text p:last-of-type {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.ct-landing-handle-building-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+}
+
+.ct-story {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
