@@ -1,18 +1,22 @@
 import React from "react";
-import styles from "styles/Navbar.module.css"
+import styles from "styles/Navbar.module.css";
 import Image from "next/image";
 import Button from "components/Button";
 
 const Navbar = () => {
-
   const startBuildingEventHandler = () => {
     console.log("Start Building Button Clicked.");
-  }
+  };
 
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
-        <Image src="/assets/images/logo.png" alt="" width={70} height={70}></Image>
+        <Image
+          src="/assets/images/logo.png"
+          alt=""
+          width={70}
+          height={70}
+        ></Image>
         <span>Gradian</span>
       </div>
       <div className={styles.link}>
@@ -23,9 +27,17 @@ const Navbar = () => {
           <li>Our Games</li>
           <li>Blog</li>
         </ul>
-        <Button onClick={startBuildingEventHandler} color="#00AE99" width="120" height="42">Start Building</Button>
+        <Button
+          onClick={startBuildingEventHandler}
+          bgColor="#00AE99"
+          color="#fff"
+          width="120"
+          height="42"
+        >
+          Start Building
+        </Button>
       </div>
     </div>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;
