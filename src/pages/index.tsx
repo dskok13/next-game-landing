@@ -6,8 +6,6 @@ import styles from "styles/Landing.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-import image1 from "/assets/images/landing/image1.png";
-
 export default function Home() {
   const landingGallery1 = [
     {
@@ -92,7 +90,12 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <Image src={image1} alt="iamge" width={320} height={304}></Image>
+            <Image
+              src="/assets/images/landing/image1.png"
+              alt="iamge"
+              width={320}
+              height={304}
+            ></Image>
           </div>
           <div className={styles["ct-story"]}>
             <span>THE STORY</span>
@@ -100,10 +103,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="">
-          <div>
+        <div className={styles["gallery-area"]}>
+          <div className={styles["sub-gallery-container"]}>
             <p>Next generation gaming</p>
-            <div>
+            <div className={styles["sub-gallery-image-container"]}>
               {landingGallery1.map((item, key) => (
                 <div key={key}>
                   <Image
@@ -112,13 +115,32 @@ export default function Home() {
                     width={85}
                     height={85}
                   ></Image>
-                  <span>{item.title}</span>
-                  <span>{item.desc}</span>
+                  <span className={styles["gallery-title"]}>{item.title}</span>
+                  <span className={styles["gallery-desc"]}>{item.desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className={styles["sub-gallery-container"]}>
+            <p>Planet Scale Infrastructure</p>
+            <div className={styles["sub-gallery-image-container"]}>
+              {landingGallery2.map((item, key) => (
+                <div key={key}>
+                  <Image
+                    src={item.imgPath}
+                    alt="Landing Image"
+                    width={85}
+                    height={85}
+                  ></Image>
+                  <span className={styles["gallery-title"]}>{item.title}</span>
+                  <span className={styles["gallery-desc"]}>{item.desc}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
+
+        <div></div>
       </div>
     </div>
   );
